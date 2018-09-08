@@ -11,22 +11,17 @@ source:
   md5: a3cb284ba0914c9d26e0954f60341354
   patches:
     - timespec.patch
+    - macro_redefined.patch
 
 build:
-  number: 1
-  skip: true          # [not win]
-  features:
-    - vc9             # [win and py27]
-    - vc10            # [win and py34]
-    - vc14            # [win and py35]
+  number: 2
+  skip: True   # [not win]
 
 requirements:
   build:
-    - python
+    - {{ compiler('c') }}
 
 test:
-  requires:
-    - python
   commands:
     - if not exist %LIBRARY_INC%\pthread.h exit 1
     - if not exist %LIBRARY_BIN%\pthreadVSE2.dll exit 1
