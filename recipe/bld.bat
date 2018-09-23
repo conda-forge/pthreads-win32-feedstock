@@ -4,6 +4,7 @@ cd pthreads.2
 nmake /E clean VSE-inlined
 
 copy pthreadVSE2.lib %LIBRARY_LIB%\pthreads.lib
+copy pthreadVSE2.lib %LIBRARY_LIB%\pthread.lib
 copy pthreadVSE2.dll %LIBRARY_BIN%\pthreadVSE2.dll
 
 copy pthread.h %LIBRARY_INC%\pthread.h
