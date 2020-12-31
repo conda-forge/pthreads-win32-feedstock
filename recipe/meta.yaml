@@ -14,7 +14,7 @@ source:
     - macro_redefined.patch
 
 build:
-  number: 3
+  number: 4
   skip: True   # [not win]
 
 requirements:
