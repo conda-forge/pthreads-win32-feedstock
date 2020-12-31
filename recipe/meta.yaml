@@ -30,6 +30,7 @@ test:
     - if not exist %LIBRARY_LIB%\pthread.lib exit 1
     - if not exist %LIBRARY_LIB%\pthreadVC2.lib exit 1
     - if not exist %LIBRARY_LIB%\pthreads_static.lib exit 1
+    - if not exist %LIBRARY_LIB%\pthreadVC2-s.lib exit 1
 
 about:
   home: https://www.sourceware.org/pthreads-win32/

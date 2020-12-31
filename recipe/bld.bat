@@ -17,6 +17,7 @@ copy pthreadVC2.dll %LIBRARY_BIN%\pthreadVC2.dll
 
 nmake /E clean VC-static
 copy pthreadVC2.lib %LIBRARY_LIB%\pthreads_static.lib
+copy pthreadVC2.lib %LIBRARY_LIB%\pthreadVC2-s.lib
 
 cd tests
 set "CFLAGS=%XCFLAGS%"
