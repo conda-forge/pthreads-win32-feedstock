@@ -25,8 +25,10 @@ test:
   commands:
     - if not exist %LIBRARY_INC%\pthread.h exit 1
     - if not exist %LIBRARY_BIN%\pthreadVSE2.dll exit 1
+    - if not exist %LIBRARY_BIN%\pthreadVC2.dll exit 1
     - if not exist %LIBRARY_LIB%\pthreads.lib exit 1
     - if not exist %LIBRARY_LIB%\pthread.lib exit 1
+    - if not exist %LIBRARY_LIB%\pthreadVC2.lib exit 1
     - if not exist %LIBRARY_LIB%\pthreads_static.lib exit 1
 
 about:

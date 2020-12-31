@@ -11,6 +11,10 @@ copy pthread.h %LIBRARY_INC%\pthread.h
 copy sched.h %LIBRARY_INC%\sched.h
 copy semaphore.h %LIBRARY_INC%\semaphore.h
 
+nmake /E clean VC
+copy pthreadVC2.lib %LIBRARY_LIB%\pthreadVC2.lib
+copy pthreadVC2.dll %LIBRARY_BIN%\pthreadVC2.dll
+
 nmake /E clean VC-static
 copy pthreadVC2.lib %LIBRARY_LIB%\pthreads_static.lib
 
