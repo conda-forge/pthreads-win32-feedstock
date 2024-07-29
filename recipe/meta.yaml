@@ -14,12 +14,13 @@ source:
     - macro_redefined.patch
 
 build:
-  number: 3
+  number: 4
   skip: True   # [not win]
 
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ stdlib('c')}}
 
 test:
   commands:
@@ -31,7 +32,7 @@ test:
 
 about:
   home: https://www.sourceware.org/pthreads-win32/
-  license: LGPL-2
+  license: LGPL-2.0
   license_file: pthreads.2/COPYING.LIB
   summary: Open Source POSIX Threads for Win32
 

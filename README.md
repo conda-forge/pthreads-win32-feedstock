@@ -5,7 +5,7 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pthreads-win32-
 
 Home: https://www.sourceware.org/pthreads-win32/
 
-Package license: LGPL-2
+Package license: LGPL-2.0
 
 Summary: Open Source POSIX Threads for Win32
 
