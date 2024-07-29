@@ -31,7 +31,7 @@ test:
 
 about:
   home: https://www.sourceware.org/pthreads-win32/
-  license: LGPL 2
+  license: LGPL-2
   license_file: pthreads.2/COPYING.LIB
   summary: Open Source POSIX Threads for Win32
 

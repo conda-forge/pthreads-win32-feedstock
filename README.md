@@ -3,7 +3,7 @@ About pthreads-win32
 
 Home: https://www.sourceware.org/pthreads-win32/
 
-Package license: LGPL 2
+Package license: LGPL-2
 
 Feedstock license: BSD 3-Clause
 
