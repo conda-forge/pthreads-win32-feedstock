@@ -8,7 +8,7 @@ package:
 source:
   fn: pthreads-w32-{{ version_dash }}-release.zip
   url: ftp://sourceware.org/pub/pthreads-win32/pthreads-w32-{{ version_dash }}-release.zip
-  md5: a3cb284ba0914c9d26e0954f60341354
+  sha256: b9bd02958639a854461a72f72bf3e89a3c4181843b65924a54df8a50b4e5d15d
   patches:
     - timespec.patch
     - macro_redefined.patch
@@ -32,7 +32,7 @@ test:
 
 about:
   home: https://www.sourceware.org/pthreads-win32/
-  license: LGPL-2.0
+  license: LGPL-2.1-or-later
   license_file: pthreads.2/COPYING.LIB
   summary: Open Source POSIX Threads for Win32
 

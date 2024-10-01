@@ -1,9 +1,11 @@
---- pthreads.2\pthread.h
-+++ pthreads.2\pthread.h
+diff --git a/pthreads.2/pthread.h b/pthreads.2/pthread.h
+index 436ea8b..f93e99b 100644
+--- a/pthreads.2/pthread.h
++++ b/pthreads.2/pthread.h
 @@ -313,6 +313,10 @@ enum {
  #endif
  #endif
-
+ 
 +#if defined(_MSC_VER) && _MSC_VER >= 1900 && !defined(_CRT_NO_TIME_T)
 +#define _TIMESPEC_DEFINED
 +#endif
@@ -11,4 +13,3 @@
  #if !defined(HAVE_STRUCT_TIMESPEC)
  #define HAVE_STRUCT_TIMESPEC
  #if !defined(_TIMESPEC_DEFINED)
-
