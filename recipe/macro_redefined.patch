@@ -1,5 +1,7 @@
---- pthreads.2/pthread.h
-+++ pthreads.2/pthread.h
+diff --git a/pthreads.2/pthread.h b/pthreads.2/pthread.h
+index 436ea8b..752bd27 100644
+--- a/pthreads.2/pthread.h
++++ b/pthreads.2/pthread.h
 @@ -105,6 +105,7 @@
  #define PTW32_LEVEL_MAX 3
  
@@ -8,8 +10,10 @@
  #define PTW32_LEVEL PTW32_LEVEL_MAX
  /* Include everything */
  #endif
---- pthreads.2/sched.h
-+++ pthreads.2/sched.h
+diff --git a/pthreads.2/sched.h b/pthreads.2/sched.h
+index e25eb56..47f1688 100644
+--- a/pthreads.2/sched.h
++++ b/pthreads.2/sched.h
 @@ -61,6 +61,7 @@
  #define PTW32_SCHED_LEVEL_MAX 3
  
@@ -18,4 +22,3 @@
  #define PTW32_SCHED_LEVEL PTW32_SCHED_LEVEL_MAX
  /* Include everything */
  #endif
-
