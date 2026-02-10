@@ -25,7 +25,7 @@ requirements:
     - ${{ compiler("c") }}
     - ${{ stdlib("c") }}
   run_exports:
-    - ${{ pin_compatible("pthreads-win32", upper_bound="x.x.x") }}
+    - ${{ pin_subpackage("pthreads-win32", upper_bound="x.x.x") }}
 
 tests:
   - package_contents:
