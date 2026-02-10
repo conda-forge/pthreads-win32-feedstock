@@ -1,6 +1,6 @@
 --- a/pthreads.2/pthread.h
 +++ b/pthreads.2/pthread.h
-@@ -314,6 +314,10 @@ #define DWORD unsigned long
+@@ -313,6 +313,10 @@ #define DWORD unsigned long
  #endif
  #endif
 
