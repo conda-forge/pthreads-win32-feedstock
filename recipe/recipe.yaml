@@ -22,16 +22,20 @@ build:
 
 requirements:
   build:
-    - ${{ compiler('c') }}
+    - ${{ compiler("c") }}
     - ${{ stdlib("c") }}
+  run_exports:
+    - ${{ pin_compatible("pthreads-win32", upper_bound="x.x.x") }}
 
 tests:
-  - script:
-      - if not exist %LIBRARY_INC%\pthread.h exit 1
-      - if not exist %LIBRARY_BIN%\pthreadVSE2.dll exit 1
-      - if not exist %LIBRARY_LIB%\pthreads.lib exit 1
-      - if not exist %LIBRARY_LIB%\pthread.lib exit 1
-      - if not exist %LIBRARY_LIB%\pthreads_static.lib exit 1
+  - package_contents:
+      include:
+        - pthread.h
+      files:
+        - Library\bin\pthreadVSE2.dll
+        - Library\lib\pthreads.lib
+        - Library\lib\pthread.lib
+        - Library\lib\pthreads_static.lib
 
 about:
   license: LGPL-2.1-or-later
@@ -42,3 +46,4 @@ about:
 extra:
   recipe-maintainers:
     - isuruf
+    - munechika-koyo
