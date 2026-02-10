@@ -9,7 +9,7 @@ package:
   version: ${{ version }}
 
 source:
-  url: ftp://sourceware.org/pub/pthreads-win32/pthreads-w32-${{ version_dash }}-release.zip
+  url: https://mirrors.kernel.org/sourceware/pthreads-win32/pthreads-w32-${{ version_dash }}-release.zip
   sha256: b9bd02958639a854461a72f72bf3e89a3c4181843b65924a54df8a50b4e5d15d
   file_name: pthreads-w32-${{ version_dash }}-release.zip
   patches:
