@@ -1,0 +1,48 @@
+schema_version: 1
+
+context:
+  version: 2.9.1
+  version_dash: ${{ version | replace(".", "-") }}
+
+package:
+  name: pthreads-win32
+  version: ${{ version }}
+
+source:
+  url: https://mirrors.kernel.org/sourceware/pthreads-win32/pthreads-w32-${{ version_dash }}-release.zip
+  sha256: b9bd02958639a854461a72f72bf3e89a3c4181843b65924a54df8a50b4e5d15d
+  patches:
+    - timespec.patch
+    - macro_redefined.patch
+
+build:
+  number: 5
+  skip: not win
+
+requirements:
+  build:
+    - ${{ compiler("c") }}
+    - ${{ stdlib("c") }}
+  run_exports:
+    - ${{ pin_subpackage("pthreads-win32", upper_bound="x.x.x") }}
+
+tests:
+  - package_contents:
+      include:
+        - pthread.h
+      files:
+        - Library\bin\pthreadVSE2.dll
+        - Library\lib\pthreads.lib
+        - Library\lib\pthread.lib
+        - Library\lib\pthreads_static.lib
+
+about:
+  license: LGPL-2.1-or-later
+  license_file: pthreads.2/COPYING.LIB
+  summary: Open Source POSIX Threads for Win32
+  homepage: https://www.sourceware.org/pthreads-win32/
+
+extra:
+  recipe-maintainers:
+    - isuruf
+    - munechika-koyo
